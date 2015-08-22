@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="8e7ffe2e-238a-487e-bdf3-9ad6d825bb33" name="Activity1" linkedPackageId="63cb2b42-3fec-472d-9d9a-0e99271f29b9" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="ea7c1775-0882-42c3-8008-12820670457b">
+      <profileInstance Id="5b0c4273-81e5-46e1-812a-5adaae746411" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="fa57a491-08f5-48b1-8405-88065f5f2611">
+      <profileInstance Id="c9566d23-594d-46e9-8cd3-3954de96712f" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="753764ba-e380-4a81-b4a4-260eaa11d6b9" name="Activity1" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="81c3462c-7762-4a80-89f7-b5710e9b0572" />
+        <nodes>
+          <forkNode Id="11c8d838-ecde-424c-b91d-ebc44dd401ef" name="Fork1" isLeaf="false">
+            <elementDefinition Id="0db9d6f7-eeb9-4de0-be3a-2e341041624c" />
+          </forkNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="63cb2b42-3fec-472d-9d9a-0e99271f29b9" name="ModelingProject1">
+    <elementDefinition Id="150b4449-af9a-4d28-b245-1deb92651467" />
+  </package>
+</activityRootModel>

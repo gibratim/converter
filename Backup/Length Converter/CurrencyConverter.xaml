@@ -1,0 +1,68 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Length_Converter.CurrencyConverter"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="Unit Converter" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Currency Converter" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontSize="48" />
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="14,10,10,-10" RenderTransformOrigin="0.522,0.453">
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="29,46,0,0" Name="textBlock1" Text="Amount" VerticalAlignment="Top" Width="114"  />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="29,147,0,0" Name="textBlock2" Text="From" VerticalAlignment="Top" Width="114" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="29,239,0,0" Name="textBlock3" Text="To" VerticalAlignment="Top" Width="114" />
+            <TextBlock Height="30" HorizontalAlignment="Left" Margin="29,0,0,205" Name="textBlock4" Text="Amount" VerticalAlignment="Bottom" Width="114" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="179,26,0,0" Name="txtConvertedFrom" Text="" VerticalAlignment="Top" Width="200" TextChanged="txtConvertedFrom_TextChanged" >
+                <TextBox.InputScope>
+                    <InputScope>
+                        <InputScopeName NameValue="Digits" />
+                    </InputScope>
+                </TextBox.InputScope>
+            </TextBox>
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="179,389,0,0" Name="txtConvertedTo" Text="" VerticalAlignment="Top" Width="200" IsEnabled="False"  />
+            <ComboBox ScrollViewer.VerticalScrollBarVisibility="Auto" ItemsSource="{Binding ElementName=ConverterPage, Path=Locations}" Margin="179,139,70,366" Name="cmbCurrFrom">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock FontSize="30" Foreground="Black" Text="{Binding Path=Location}"></TextBlock>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <ComboBox ItemsSource="{Binding ElementName=ConverterPage, Path=Locations}" Margin="179,223,70,274" Name="cmbCurrTo" ScrollViewer.VerticalScrollBarVisibility="Auto">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock FontSize="30" Foreground="Black" Text="{Binding Path=Location}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <Button Content="Convert" Height="72" HorizontalAlignment="Left" Margin="179,298,0,0" Name="btnConvert" VerticalAlignment="Top" Width="200" Click="btnConvert_Click" />
+        </Grid>
+    </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FF3E118D">
+            <shell:ApplicationBarIconButton IconUri="/Resources/refresh.png" Text="Refresh" Click="ApplicationBarIconButton_Click"/>
+
+            <shell:ApplicationBar.MenuItems>
+
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+</phone:PhoneApplicationPage>

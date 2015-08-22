@@ -1,0 +1,11 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="Length Converter" EntryPointType="Length_Converter.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="Length Converter" Source="Length Converter.dll" />
+    <AssemblyPart x:Name="Coding4Fun.CurrencyExchange" Source="Coding4Fun.CurrencyExchange.dll" />
+    <AssemblyPart x:Name="Coding4Fun.Phone.Controls" Source="Coding4Fun.Phone.Controls.dll" />
+    <AssemblyPart x:Name="Coding4Fun.Phone.Site.Controls" Source="Coding4Fun.Phone.Site.Controls.dll" />
+    <AssemblyPart x:Name="findroute" Source="findroute.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Toolkit" Source="Microsoft.Phone.Controls.Toolkit.dll" />
+    <AssemblyPart x:Name="Microsoft.Phone.Controls.Maps" Source="Microsoft.Phone.Controls.Maps.dll" />
+  </Deployment.Parts>
+</Deployment>

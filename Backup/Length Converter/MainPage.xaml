@@ -1,0 +1,63 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Length_Converter.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock x:Name="ApplicationTitle" Text="converter" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Select" Margin="9,-7,264,0" Style="{StaticResource PhoneTextTitle1Style}" Height="78"/>
+            <TextBlock HorizontalAlignment="Left" Name="StatusTextBlock" Text="location service is off" Width="436" Style="{StaticResource PhoneTextNormalStyle}" Foreground="{StaticResource PhoneAccentBrush}" Height="37" Margin="12,0,0,0" />
+
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Margin="24,151,0,10" Grid.RowSpan="2">
+            <Button Content="Length" Height="511" HorizontalAlignment="Left" Name="button1" Background="Green" VerticalAlignment="Top" Width="194" Click="button1_Click" RenderTransformOrigin="0.5,0.5" Margin="-24,-9,0,0"/>
+            <Button Content="Currency " Background="Purple" HorizontalAlignment="Left" Margin="151,-7,0,0" VerticalAlignment="Top" Width="305" Click="Button_Click" Height="138"/>
+            <Button Content="Weight" Background="Peru" HorizontalAlignment="Left" Margin="151.946,109.013,0,0" VerticalAlignment="Top" Width="166.125" Height="155.973" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Click="Button_Click_1">
+                <Button.RenderTransform>
+                    <CompositeTransform Rotation="0.256"/>
+                </Button.RenderTransform>
+            </Button>
+            <Button Content="Forex Bureau" Background="#ff6000" HorizontalAlignment="Left" Margin="151,374,0,0" VerticalAlignment="Top" Width="305" Height="128" Click="Button_Click_3"/>
+
+            <Button Content="Facebook" Background="DarkBlue" HorizontalAlignment="Left" Margin="298,247,0,0" VerticalAlignment="Top" Width="158" Height="148"/>
+            <Button Content="Notes" HorizontalAlignment="Left" Margin="153,247,0,0" VerticalAlignment="Top" Width="165" Height="148"/>
+        </Grid>
+        <Button Content="Area" HorizontalAlignment="Left" Margin="322,81,0,0" Grid.Row="1" VerticalAlignment="Top" Width="158" Click="Button_Click_2" Height="156"/>
+        <TextBlock Name="LatitudeTextBlock" HorizontalAlignment="Left" Margin="264,42,0,0" TextWrapping="Wrap" Text="Latitude"  VerticalAlignment="Top" Width="184" Height="39"/>
+        <TextBlock Name="LongitudeTextBlock" HorizontalAlignment="Left" Margin="264,86,0,0" TextWrapping="Wrap" Text="Longitude" VerticalAlignment="Top" Width="184" Height="35"/>
+    </Grid>
+    <!--Sample code showing usage of ApplicationBar-->
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" BackgroundColor="#FF4C11CB">
+            
+            <shell:ApplicationBarIconButton IconUri="/low.png" Click="LowButtonClick" Text="low"></shell:ApplicationBarIconButton>
+            <shell:ApplicationBarIconButton IconUri="/high.png" Click="HighButtonClick" Text="high"></shell:ApplicationBarIconButton>
+            <shell:ApplicationBarIconButton IconUri="/stop.png" Click="StopButtonClick" Text="stop"></shell:ApplicationBarIconButton>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="about" Click="ApplicationBarMenuItem_Click"/>
+
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
+
+</phone:PhoneApplicationPage>
